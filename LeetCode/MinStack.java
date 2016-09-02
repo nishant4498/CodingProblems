@@ -53,3 +53,16 @@ public class MinStack {
 	}
 
 }
+/**
+ * Maintain a min element.
+ * 
+ * Push(x) - If stack is empty push 0 , min = x
+ * 		   - Push (x - min)
+ * 		   - If x < min , min =x
+ * 
+ * Pop  - remove top
+ * 		   -  If top < 0 , min = min - top
+ * 
+ * Top - top > 0 , top = top + min
+ *         - else ,min
+ */
