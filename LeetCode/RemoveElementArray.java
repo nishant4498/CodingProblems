@@ -1,6 +1,8 @@
 
-// https://leetcode.com/articles/remove-element/
-
+/*
+ *  https://leetcode.com/articles/remove-element/ *  
+ *  Also Refer RemoveDuplicatesSortedArray.
+ */
 public class RemoveElementArray {
 
 	public static void main(String[] args) {
