@@ -10,13 +10,15 @@ public class GuessNumberBinarySearch {
 		System.out.println(guessNum(10));
 	}
 	
-	
+	/*
+	 * This is the iterative approach to Binary Search.
+	 */
 	public static int guessNum(int n){
 		int low = 1;
 		int high = n;
 		
 		while(low <= high){
-			int mid = low + (high-low)/2; // To prevent overflow.
+			int mid = low + (high-low)/2; // To prevent overflow. 
 			
 			if(guess(mid) == 0) 
 				return mid;
