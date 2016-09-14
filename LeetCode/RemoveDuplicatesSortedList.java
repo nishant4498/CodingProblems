@@ -4,7 +4,7 @@ public class RemoveDuplicatesSortedList {
 	public ListNode deleteDuplicates(ListNode head) {
 	    ListNode current = head;
 	    while (current != null && current.next != null) {
-	        if (current.next.val == current.val) {
+	        if (current.next.data == current.data) {
 	            current.next = current.next.next;
 	        } else {
 	            current = current.next;

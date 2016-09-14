@@ -42,7 +42,7 @@ public class IntersectionTwoLists {
 			biggerList = biggerList.next;
 		}
 
-		while (biggerList.val != smallerList.val) {
+		while (biggerList.data != smallerList.data) {
 			biggerList = biggerList.next;
 			if (biggerList == null)
 				return null;

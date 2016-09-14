@@ -16,14 +16,17 @@ public class PalindromePermutation {
 		System.out.println(isPalindromePermutationBitwise(str1));
 
 	}
-	
+	/*
+	 * Get the count of each character in an array of size equal to num characters = 26.
+	 * If there are more than one chars with odd count return false.
+	 */
 	public static boolean isPalindromePermutation(String str){
 		int[] countChars = new int[26];
 		
 		for(int i =0; i< str.length(); i++){
 			char c = str.charAt(i);
 			int index = getCharIndex(c);
-			if( index > 0){
+			if( index > 0){ // to ignore characters other than alphabets.
 				countChars[index]++;
 			}
 		}
@@ -37,7 +40,10 @@ public class PalindromePermutation {
 		}
 		return true;
 	}
-	
+	/*
+	 * No need to stress more on this method.	 * 
+	 * When increasing the char count, also maintain a count of number of odd chars.
+	 */
 	public static boolean isPalindromePermutationAlternate(String str){
 		int[] countChars = new int[26];
 		
@@ -88,12 +94,14 @@ public class PalindromePermutation {
 		if((bitVector & mask) == 0){ // bitVector = 1011 0111 , Value at index is not set
 			bitVector |= mask; // Set that bit bitVector will become 1011 1111
 		}else{//bitVector = 1011 1000 , , Value at index is set
-			bitVector = bitVector & (~mask); // 1011 1000 & 1111 0111 , sets the but at Pos to zero.
+			bitVector = bitVector & (~mask); // 1011 1000 & 1111 0111 , sets the bit at Pos to zero.
 		}
 		
 		return bitVector;
 	}
-	
+	/*
+	 * The AND of num and num-1 will be zeo if there is only one bit set in num.
+	 */
 	public static boolean checkExactlyOneBitset(int bitVector){
 		return (bitVector & (bitVector - 1)) == 0;
 	}

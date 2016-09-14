@@ -5,15 +5,17 @@ import java.util.Set;
 
 public class RemoveDuplicateUnsortedList {
 	public ListNode removeduplicates(ListNode head){
+		if(head == null || head.next == null) return head;
+		
 		ListNode curr = head;
 		ListNode prev = null;
 		
 		Set<Integer> nodeList = new HashSet<>();
 		while(curr != null){
-			if(nodeList.contains(curr.val)){
+			if(nodeList.contains(curr.data)){
 				prev.next = curr.next;
 			}else{
-				nodeList.add(curr.val);
+				nodeList.add(curr.data);
 				prev = curr;
 			}
 			curr = curr.next;
@@ -23,10 +25,10 @@ public class RemoveDuplicateUnsortedList {
 }
 
 class ListNode {
-	int val;
+	int data;
 	ListNode next;
 
 	ListNode(int x) {
-		val = x;
+		data = x;
 	}
 }

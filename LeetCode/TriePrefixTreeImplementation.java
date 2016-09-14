@@ -1,10 +1,11 @@
 
-public class ImplementTriePrefixTree {
+public class TriePrefixTreeImplementation {
 
 	public static void main(String[] args) {
 		Trie trie = new Trie();
 		trie.insert("nishant");
 		System.out.println(trie.search("nishant"));
+		System.out.println(trie.startsWith("nisu"));
 	}
 
 }
@@ -41,6 +42,10 @@ class TrieNode{
 }
 
 class Trie{
+	/*
+	 * A root for a trie just holds the links for the first level.It does not contain 
+	 * any value.
+	 */
 	TrieNode root;
 	
 	public Trie(){

@@ -1,14 +1,14 @@
+package LinkedList;
 /*
  * We solve this question using a one pass & two pointer method.
  * Important point to note is that the first pointer(fast) should move n+1 steps so that the
  * gap bw second and first pointer is n. In this case when first pointer will reach the end,
  * the second pointer will be just before the nth node from end. 
  */
-public class RemoveNthNodeEndLL {
+public class KthNodeEnd {
 	public ListNode removeNthFromEnd(ListNode head, int n) {
 		/**
-		 * Creating a dummy node saves a lot of effort of handling the null
-		 * conditions.
+		 * Since we dont need to delet node, creating a 
 		 */
 		ListNode dummy = new ListNode(0);
 		dummy.next = head;
@@ -19,7 +19,6 @@ public class RemoveNthNodeEndLL {
 		//Move the first pointer n+1 steps(starting from dummy node) so that the gap is of n nodes.
 		
 		for(int i =1; i<= n+1 ; i++){
-			if (first == null) return null; 
 			first = first.next;
 		}
 		
@@ -28,10 +27,6 @@ public class RemoveNthNodeEndLL {
 			second = second.next;
 		}
 		
-		second.next = second.next.next;
-		
-		// This takes care of null conditions.In case there is only one node and
-		// that has to be removed, this will return null
-		return dummy.next;
+		return second.next; 
 	}
 }

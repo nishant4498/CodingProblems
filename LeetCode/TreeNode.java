@@ -1,9 +1,9 @@
 public class TreeNode {
-	int val;
+	int data;
 	TreeNode left;
 	TreeNode right;
 
 	TreeNode(int x) {
-		val = x;
+		data = x;
 	}
 }
