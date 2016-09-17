@@ -16,7 +16,9 @@ public class InvertBinaryTree {
         root.right = left;
         return root;
     }
-    
+    /*
+     * Practice the iterative approach.
+     */
     public TreeNode invertTreeIterative(TreeNode root){
     	if(root == null) return null;
     	Queue<TreeNode> queue = new LinkedList<>();    	

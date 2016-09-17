@@ -4,7 +4,7 @@
 public class LongestCommonPrefix {
 
 	public static void main(String[] args) {
-		String[] inputStrings = {"abc" , "abcde", "abctf", "abcde"};
+		String[] inputStrings = {"abcxyz" , "abcde", "abctf", "abcdefgh", "abc"};
 		System.out.println(longestCommonPrefixHorizontalScan(inputStrings));
 		System.out.println(longestCommonPrefixVerticalScan(inputStrings));
 		System.out.println(longestCommonPrefixDivideAndConquer(inputStrings));
@@ -24,8 +24,9 @@ public class LongestCommonPrefix {
         String prefix = strs[0];
         int length = prefix.length();
         for(int i = 1; i< strs.length; i++){
-            while(strs[i].indexOf(prefix) != 0){
-                prefix = prefix.substring(0,  length--);
+        	//indexOf returns the first index of specified substring. Here since its prefix we are comparing to zero.
+        	while(strs[i].indexOf(prefix) != 0){
+                prefix = prefix.substring(0,  length - 1);// The last index is exclusive.
                 if(prefix == "") return "";
             }
         }
