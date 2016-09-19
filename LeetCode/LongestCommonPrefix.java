@@ -22,11 +22,11 @@ public class LongestCommonPrefix {
         if(strs.length == 0) return "";
         
         String prefix = strs[0];
-        int length = prefix.length();
+        //int length = prefix.length();
         for(int i = 1; i< strs.length; i++){
         	//indexOf returns the first index of specified substring. Here since its prefix we are comparing to zero.
         	while(strs[i].indexOf(prefix) != 0){
-                prefix = prefix.substring(0,  length - 1);// The last index is exclusive.
+                prefix = prefix.substring(0,  prefix.length() - 1);// The last index is exclusive.
                 if(prefix == "") return "";
             }
         }
@@ -54,7 +54,7 @@ public class LongestCommonPrefix {
                 }
             }
         }
-        return strs[0];
+        return strs[0];//Return the first string when all of itsa characters match with other strings.
     }
 	/*
 	 * In this method we apply Divide and Conquer approach to solve the problem.
@@ -93,7 +93,7 @@ public class LongestCommonPrefix {
     /*
      * This can also be solved using binary search.
      * 1) Find the min length of the all the strings.
-     * 2) The binary search the LCP using binary search in this string.
+     * 2) Perform a binary serach to find the prefix of the largest length in all the strings.
      */
     
     public static String longestCommonPrefixBinarySearch(String[] strs) {
@@ -117,7 +117,11 @@ public class LongestCommonPrefix {
         }
         return strs[0].substring(0, (low + high)/2);
     }
-
+    
+    
+    /*
+     * Checks if all the strings in the given array have a common prefix of length len.
+     */
     private static boolean isCommonPrefix(String[] strs, int len){
         String prefix = strs[0].substring(0,len);
         
