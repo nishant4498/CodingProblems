@@ -17,7 +17,10 @@ public class InvertBinaryTree {
         return root;
     }
     /*
-     * Practice the iterative approach.
+     * The iterative idea is very simple.
+     * We use a queue to keep the nodes whose childeren have not beem swapped yet.
+     * The only thing to keep in mind is - First swap the children, then put them in the queue.
+     * Thus the right child will come first in the queue as it ill become left child after swapping.
      */
     public TreeNode invertTreeIterative(TreeNode root){
     	if(root == null) return null;

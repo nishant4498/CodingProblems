@@ -107,6 +107,9 @@ public class LongestCommonPrefix {
         }
         
         int low = 0;
+        /*
+         * minLength is used to determine the initial high value for binary search.
+         */
         int high = minLength;
         while(low <= high){
             int medium = (low + high)/2; // This is fine here as there cant be overflow.

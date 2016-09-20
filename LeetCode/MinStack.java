@@ -1,5 +1,7 @@
 import java.util.Stack;
-
+/*
+ * Also check the CTCI approach if you get time.
+ */
 public class MinStack {
 	long min;
 	Stack<Long> stack;
