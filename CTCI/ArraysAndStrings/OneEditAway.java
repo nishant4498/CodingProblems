@@ -47,11 +47,13 @@ public class OneEditAway {
 				 * indices should be same.If characters are differnt and indices
 				 * are also diff , this means that this is the second diff
 				 * character in the two strings.
+				 * 
+				 * Simply we can also use a boolean flag to see if a diff has been found already
 				 */
 				if(index1 != index2){
 					return false;
 				}
-				index2++; // increment the longer string index.
+				index2++; // increment the longer string index.We just do this once since next time will be 2nd mismatch.
 			}else{ // compare the next two chars
 				index1++;
 				index2++;
