@@ -15,7 +15,7 @@ public class PartitionList {
         ListNode curr = head;
         
         while(curr != null){
-            ListNode next = curr.next;
+            ListNode next = curr.next;// This is important to take the next node before.
             if(curr.data >= x){
                 tail.next = curr;
                 tail = curr;
