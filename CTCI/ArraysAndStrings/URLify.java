@@ -15,6 +15,9 @@ public class URLify {
 				spaceCount++;
 			}
 		}
+		/*
+		 * We can also use the fact the length of the string is good enough to adjust the new chars.
+		 */
 		int newLength = length + spaceCount*2;
 		chars[newLength] = '\n';
 		for(int i = length-1 ; i >= 0 ; i--){
@@ -30,5 +33,4 @@ public class URLify {
 		}
 		return new String(chars);
 	}
-
 }

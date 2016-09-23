@@ -26,7 +26,7 @@ public class PalindromePermutation {
 		for(int i =0; i< str.length(); i++){
 			char c = str.charAt(i);
 			int index = getCharIndex(c);
-			if( index > 0){ // to ignore characters other than alphabets.
+			if( index >= 0){ // to ignore characters other than alphabets.
 				countChars[index]++;
 			}
 		}
@@ -51,7 +51,7 @@ public class PalindromePermutation {
 		for(int i =0; i< str.length(); i++){
 			char c = str.charAt(i);
 			int index = getCharIndex(c);
-			if( index > 0){
+			if( index >= 0){
 				countChars[index]++;
 				/*
 				 * Counting the number of odds on the go.No need to do in a
@@ -105,7 +105,9 @@ public class PalindromePermutation {
 	public static boolean checkExactlyOneBitset(int bitVector){
 		return (bitVector & (bitVector - 1)) == 0;
 	}
-	
+	/*
+	 * We consider this problem as case sensitive.
+	 */
 	public static int getCharIndex(char c){
 		if(c >= 'a' & c <= 'z')
 			return c - 'a';
