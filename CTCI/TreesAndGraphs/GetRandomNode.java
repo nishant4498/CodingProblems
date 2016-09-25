@@ -28,7 +28,10 @@ class TreeNodeRandom{
 		 * Generates a random number between 0(inclusive) and size(exclusive).
 		 */
 		int index = random.nextInt(size);
-		
+		/*
+		 * It is important to note that we have to compare with either leftSize or rightSize
+		 * since the random number generated will not include size. 
+		 */
 		if(index < leftSize){
 			return left.getRandomNode();
 		}else if(index == leftSize){

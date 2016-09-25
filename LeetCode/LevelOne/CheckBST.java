@@ -4,7 +4,7 @@ package LevelOne;
  * left.data <= node.data < right.data
  */
 public class CheckBST {
-	public long lastVistedValue = Long.MIN_VALUE;
+	public long lastVistedValue = Long.MIN_VALUE;	
 	
 	/*
 	 * This method while checking the nodes inorder stores the previous node value.
@@ -38,6 +38,9 @@ public class CheckBST {
 	private boolean checkBST(TreeNode node, Integer minValue, Integer maxValue){
 		if(node == null) return true;
 		
+		/*
+		 * Point to note is this is not inorder so the data we check before only.
+		 */
 		if(node.data <= minValue || node.data > maxValue) return false;
 		
 		return checkBST(node.left, minValue, node.data) && checkBST(node, node.data, maxValue);

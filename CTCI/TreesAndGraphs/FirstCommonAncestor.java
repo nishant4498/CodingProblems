@@ -7,6 +7,9 @@ public class FirstCommonAncestor {
 	 * The link to parents needs to be stored.
 	 */
 	public TreeNode commonAncestorWithParentLink(TreeNode p, TreeNode q){
+		if(p == q){
+			return p;
+		}
 		int delta = depth(p) - depth(q);
 		TreeNode deep = (delta > 0) ? p : q;//get deeper node.
 		TreeNode shallow = (delta > 0) ? q : p;//get shallower node.

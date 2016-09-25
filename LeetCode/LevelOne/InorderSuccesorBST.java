@@ -1,4 +1,5 @@
 package LevelOne;
+
 /*
  * If the Node has right child then the Succesor will be found on the left most child of right 
  * subtree.
@@ -21,14 +22,14 @@ public class InorderSuccesorBST {
 			return leftMostChild(node.right);
 		}else{
 			// Go up until we are on the left branch instead of right.
-			TreeNode q = node;
-			TreeNode x = q.parent;
+			TreeNode curr = node;
+			TreeNode parnt = curr.parent;
 			
-			while(x.left != q){
-				q = x;
-				x = x.parent;
+			while(parnt!= null && parnt.left != curr){
+				curr = parnt;
+				parnt = curr.parent;
 			}
-			return x;
+			return parnt;
 		}
 	}
 	

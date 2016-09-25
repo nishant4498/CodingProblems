@@ -57,7 +57,9 @@ public class CheckSubtree {
 		
 		return isSubtree(r1.left, r2) || isSubtree(r1.right, r2);
 	}
-	
+	/*
+	 *Same as checking two trees are identical
+	 */
 	private boolean matchTree(TreeNode t1, TreeNode t2){
 		if(t1 == null && t2 == null){
 			return true; //Reached end of tree.
@@ -66,7 +68,7 @@ public class CheckSubtree {
 		}else if(t1.data != t2.data){
 			return false;
 		}else{
-			return checkSubtree(t1.left, t2.left) && checkSubtree(t1.right, t2.right);
+			return matchTree(t1.left, t2.left) && matchTree(t1.right, t2.right);
 		} 
 	}
 }

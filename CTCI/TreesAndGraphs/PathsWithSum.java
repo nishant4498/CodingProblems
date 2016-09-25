@@ -38,7 +38,7 @@ public class PathsWithSum {
 	}
 	
 	public void incrementHashTable(HashMap<Integer, Integer> hashTable, int key, int delta){
-		int newCount = hashTable.get(key) - delta;
+		int newCount = hashTable.get(key) + delta;
 		if(newCount == 0){
 			hashTable.remove(key);
 		}else{
@@ -57,8 +57,8 @@ public class PathsWithSum {
 		
 		int pathsFromRoot = countPathsWithSumFromNode(root, targetSum , 0);
 		
-		int pathsFromLeft = countPathsWithSum(root.left, targetSum);
-		int pathsFromRight = countPathsWithSum(root.right, targetSum);
+		int pathsFromLeft = checkPathsWithSumBruteForce(root.left, targetSum);
+		int pathsFromRight = checkPathsWithSumBruteForce(root.right, targetSum);
 		
 		return pathsFromRoot + pathsFromLeft + pathsFromRight;
 	}
@@ -73,7 +73,10 @@ public class PathsWithSum {
 		if(currentSum == targetSum){
 			totalPaths++;
 		}
-		
+		/*
+		 * Since we are setting totalPaths to zero, the lower level will return one if there is path with sum and 
+		 * it will keep on getting added up the tree.
+		 */
 		totalPaths += countPathsWithSumFromNode(node.left, targetSum, currentSum);
 		totalPaths += countPathsWithSumFromNode(node.right, targetSum, currentSum);
 		return totalPaths;
