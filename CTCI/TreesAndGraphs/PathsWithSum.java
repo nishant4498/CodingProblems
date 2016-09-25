@@ -1,7 +1,9 @@
 package TreesAndGraphs;
 
 import java.util.HashMap;
-
+/*
+ * Do a sample run on some graph to understand more clearly on the decrement hash table function.
+ */
 public class PathsWithSum {
 	
 	public int countPathsWithSum(TreeNode root, int targetSum){
@@ -30,7 +32,9 @@ public class PathsWithSum {
 		totalPaths += countPathsWithSum(node.left, targetSum, runningSum, pathCount);
 		totalPaths += countPathsWithSum(node.right, targetSum, runningSum, pathCount);
 		/*
-		 * Still did not get why to decrement the count in hash table.
+		 * The hash table needs to be decremented since the running sum from lower levels do not count for the 
+		 * sum in upper levels.Also if we dont delete these values a sum from left subtree might be counted as  a path in the right
+		 * subtree.
 		 */
 		incrementHashTable(pathCount , runningSum, -1);
 		
