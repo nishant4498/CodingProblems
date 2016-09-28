@@ -1,9 +1,9 @@
 package LevelOne;
 public class ListNode {
-	int data;
-	ListNode next;
+	public int data;
+	public ListNode next;
 
-	ListNode(int x) {
+	public ListNode(int x) {
 		data = x;
 	}
 }
