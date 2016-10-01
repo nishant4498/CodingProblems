@@ -48,18 +48,12 @@ public class PostorderIterative {
 	/*
 	 * Approach 2- One Stack
 	 * 1) Keep a curr pointer to track the current node(start with root).
-	 * 2) If the curr is not null and has a left child, push the left child to stack.
-	 * 3) If curr is null, check if the node at the top of stack has a right child.
-	 * 4) If no right child pop the node and print it.
-	 * 5) Then we check if the node that we popped is a right child of top node.
-	 * 6) If not right child, then check if top node has a right child, then set curr to right child
-	 *    of top node.
-	 * 7) In case a node popped is the right child of top node , then visit the top node since both 
-	 *    its left and right are visited. 
-	 *    
-	 *  
-	 *    
-	 *  Repeat the steps. 
+	 * 2) If the curr is not null push curr to stack.Make curr = curr.left.
+	 * 3) If curr is null(we have navigated to the far left), check if the node 
+	 * 	  at the top of stack has a right child.
+	 * 4) If there is a right child, make that as a curr node and repeat steps 1-4.
+	 * 5) If no right child pop the node and print it.
+	 * 5a) Keep looking till this node is the right child and pop that node.
 	 */
 	
 	public List<Integer> postorderTraversalOneStack(TreeNode root) {
@@ -78,6 +72,7 @@ public class PostorderIterative {
                  if(temp == null){ // If no right child we can print the node.
                      temp = stack.pop();
                      result.add(temp.data);
+                     //Keep printing all the parent nodes since we have already processes the right and left child.
                      while(!stack.isEmpty() && temp == stack.peek().right){
                          temp = stack.pop();
                          result.add(temp.data);
