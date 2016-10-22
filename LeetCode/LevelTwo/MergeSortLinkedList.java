@@ -56,7 +56,7 @@ class LinkedList {
 	}
 
 	/*
-	 * In case of MergeSortedList we need the previous node beofore the middle
+	 * In case of MergeSortedList we need the previous node before the middle
 	 * node so that we can set the next to null;
 	 */
 	ListNode getMidNode(ListNode head) {
@@ -93,13 +93,13 @@ class LinkedList {
 	}
 	
 	public ListNode MergeSortedListIteration(ListNode left, ListNode right) {
-		if (left == null) {
-			return right;
-		}
-
-		if (right == null) {
-			return left;
-		}
+//		if (left == null) {
+//			return right;
+//		}
+//
+//		if (right == null) {
+//			return left;
+//		}
 		ListNode mergeHead = new ListNode(0);
 		ListNode tail = mergeHead;
 		while (left != null && right != null) {

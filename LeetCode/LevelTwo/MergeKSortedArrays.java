@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/*
+ * 1. Form a min heap with the first element of each array.
+ * 2. Take the top from the heap and add to the result.
+ * 3. If the top array has more elements add its next element to the heap.
+ */
 public class MergeKSortedArrays {
 	
 	public static int[] mergeKSortedArrays(int[][] arrs){
