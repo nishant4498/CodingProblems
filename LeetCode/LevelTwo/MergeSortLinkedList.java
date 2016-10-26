@@ -93,13 +93,6 @@ class LinkedList {
 	}
 	
 	public ListNode MergeSortedListIteration(ListNode left, ListNode right) {
-//		if (left == null) {
-//			return right;
-//		}
-//
-//		if (right == null) {
-//			return left;
-//		}
 		ListNode mergeHead = new ListNode(0);
 		ListNode tail = mergeHead;
 		while (left != null && right != null) {
