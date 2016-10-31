@@ -1,5 +1,6 @@
-package LevelTwo;
+package LevelThree;
 /*
+ * CTCI - 16.17
  * https://leetcode.com/problems/maximum-subarray/
  * We should ignore the sum of the previous n-1 elements if nth element is greater
  * than the sum till nth element.

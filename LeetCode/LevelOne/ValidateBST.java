@@ -3,7 +3,7 @@ package LevelOne;
  * Check whether a given tree is Binary Search Tree or not.
  * left.data <= node.data < right.data
  */
-public class CheckBST {
+public class ValidateBST {
 	public long lastVistedValue = Long.MIN_VALUE;	
 	
 	/*
@@ -40,6 +40,7 @@ public class CheckBST {
 		
 		/*
 		 * Point to note is this is not inorder so the data we check before only.
+		 * This condition is different in leetcode since their definition is different.
 		 */
 		if(node.data <= minValue || node.data > maxValue) return false;
 		

@@ -1,6 +1,8 @@
 package LevelOne;
 
 /*
+ * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ * 
  * We solve this question using a one pass & two pointer method.
  * Important point to note is that the first pointer(fast) should move n+1 steps so that the
  * gap bw second and first pointer is n. In this case when first pointer will reach the end,

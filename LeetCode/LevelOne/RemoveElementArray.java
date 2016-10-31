@@ -24,18 +24,18 @@ public class RemoveElementArray {
 	 * might also be euqal to val and thus we need to check that as well.
 	 */
 	public static int removeElement(int[] nums, int val) {
-        int count = nums.length;
+        int j = nums.length - 1;
         int i = 0;
-        while( i < count){
+        while( i <= j){
             if(nums[i] == val){
-                nums[i] = nums[count - 1];
-                count--;
+                nums[i] = nums[j];
+                j--;
                 // Dont increment i to check the copied number from end again.
             }else{
                 i++;
             }
         }        
-        return count;
+        return i;
     }
 
 }

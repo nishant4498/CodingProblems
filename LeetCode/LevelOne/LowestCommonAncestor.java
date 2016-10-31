@@ -1,5 +1,26 @@
 package LevelOne;
-public class FirstCommonAncestor {
+public class LowestCommonAncestor {
+	/*
+	 * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+	 * Check for any of the p and q in both left and right subtree.
+	 * We keep on moving until we see that that both nodes are on one side.
+	 * The LCA is the node where p is on one side and q on the other side.
+	 */
+	public TreeNode lowestCommonAncestorRecursion(TreeNode root, TreeNode p, TreeNode q){
+		if(root == null || root == p || root == q)
+			return root;
+		
+		TreeNode l = lowestCommonAncestorRecursion(root.left, p, q);
+		TreeNode r = lowestCommonAncestorRecursion(root.right, p, q);
+		
+		//This is the point of LCA.
+		if(l != null && r != null) return root;
+		
+		if(l == null && r == null) return null;
+		
+		return l == null ? r : l;
+	}	
+	
 	/*
 	 * This method is similar to finding the intersection of two linked lists.
 	 * We first find the difference bw the depth of nodes anf move the deeper one upwards
@@ -22,25 +43,6 @@ public class FirstCommonAncestor {
 		
 		return deep == null || shallow == null ? null : deep; 
 	} 
-	/*
-	 * Check for any of the p and q in both left and right subtree.
-	 * We keep on moving until we see that that both nodes are on one side.
-	 * The LCA is the node where p is on one side and q on the other side.
-	 */
-	public TreeNode lowestCommonAncestorRecursion(TreeNode root, TreeNode p, TreeNode q){
-		if(root == null || root == p || root == q)
-			return root;
-		
-		TreeNode l = lowestCommonAncestorRecursion(root.left, p, q);
-		TreeNode r = lowestCommonAncestorRecursion(root.right, p, q);
-		
-		//This is the point of LCA.
-		if(l != null && r != null) return root;
-		
-		if(l == null && r == null) return null;
-		
-		return l == null ? r : l;
-	}
 	
 	private TreeNode goUpBy(TreeNode node, int delta){
 		while(delta > 0 && node != null){

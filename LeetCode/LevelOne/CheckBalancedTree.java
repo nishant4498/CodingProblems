@@ -16,7 +16,17 @@ public class CheckBalancedTree {
         if(root == null) 
         	return -1;
         
+        /*
+         * Here we can't write leftHeight = 1 + getHeight(root.left), since whenever min 
+         * value is returned it will get added by 1 and thus never false answer.
+         * Also we dont need to check any further when we find that some node is not balanced.
+         */
         int leftHeight = getHeight(root.left);
+        /*
+         * Its very important to check this condition here since , it might be possible that both
+         * left and right return min value. In this case their diff will be zero and thus
+         * we will return true when we need to rerturn false
+         */
         if(leftHeight == Integer.MIN_VALUE) return Integer.MIN_VALUE;
         
         int rightHeight = getHeight(root.right);

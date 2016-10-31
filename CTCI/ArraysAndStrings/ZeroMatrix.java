@@ -5,6 +5,8 @@ public class ZeroMatrix {
 	 * Here we first store the rows and cols which have the the zero in the original matrix.
 	 * We just need one flag for each row or col, since all of that row will be set to zero
 	 * no matter where the zero is found in that row or col.
+	 * 
+	 * Check the in place solution in leetcode LevelFour.
 	 */
 	public void setZeroes(int[][] matrix){
 		boolean[] row = new boolean[matrix.length];

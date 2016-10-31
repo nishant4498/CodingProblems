@@ -23,7 +23,6 @@ public class LongestCommonPrefix {
         if(strs.length == 0) return "";
         
         String prefix = strs[0];
-        //int length = prefix.length();
         for(int i = 1; i< strs.length; i++){
         	//indexOf returns the first index of specified substring. Here since its prefix we are comparing to zero.
         	while(strs[i].indexOf(prefix) != 0){

@@ -1,8 +1,8 @@
 package LevelThree;
 /*
- * Basically the difference between this and subsequence is here we need to only check the LCS[i-1][j-1]
- * if x[i] = y[j].
- * The second difference id that the result is not stored in the LCS[m][n]. We need to navigate through the 
+ * Basically the difference between this and subsequence is here when x[i] != y[j] LCS[i][j] = 0.
+ * In case of sunsequence we take the maximum of LCS[i-1][j] & LCS[i][j-1].
+ * The second difference is that the result is not stored in the LCS[m][n]. We need to navigate through the 
  * entire matrix to check for the result.Here we just keep updating the result in maxLength.
  */
 public class LongestCommonSubstring {
