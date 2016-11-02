@@ -2,7 +2,7 @@
 public class ListToNum {
 
 	public static void ListToNumber(){
-		int[] a = {2,4,6};
+		int[] a = {2,4,6};//Number is 642
 		int num =0;
 		
 		int length = a.length;
