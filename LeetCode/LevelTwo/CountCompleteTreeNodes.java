@@ -22,7 +22,11 @@ public class CountCompleteTreeNodes {
 	       * thus 2 << 1 = 4. This needs to be taken carefully. 
 	       */
 	      if(leftHeight == rightHeight){
-	          return ((2 << leftHeight-1) - 1 );  
+	    	  /**
+	    	   * Math.pow(2,h) -1 - Problem with this it needs double as parameter and returns double
+	    	   * (2 << h-1) - 1  - 
+	    	   */
+	          return (1 << leftHeight) - 1;  
 	      }else{
 	          return 1 + countNodes(root.left) + countNodes(root.right);
 	      }
@@ -37,8 +41,7 @@ public class CountCompleteTreeNodes {
 	            curr = curr.left;
 	            height++;
 	        }
-	        return height;
-	        
+	        return height;	        
 	    }
 	    
 	    public int getRightHeight(TreeNode node){

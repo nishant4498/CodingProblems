@@ -47,7 +47,6 @@ public class LongestPalindromicSubstring {
 						maxLength = k;
 						begin = i;
 					}
-
 				}
 			}
 		}

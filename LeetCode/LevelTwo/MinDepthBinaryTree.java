@@ -15,7 +15,7 @@ public class MinDepthBinaryTree {
 		
 		/*
 		 * Here we directly cant write the below since if one of the subtrees say right is null, we will get
-		 * minDepth as 1(just the root) , but actually it should return minDepth on the left. 
+		 * minDepth as 1(just the root) , but actually it should return minDepth on the left.
 		 * return Math.min(minDepth(root.left) , minDepth(root.right)) + 1;
 		 */
 	}

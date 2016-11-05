@@ -1,6 +1,9 @@
 package LevelTwo;
 /*
  * https://leetcode.com/problems/sum-of-left-leaves/
+ * 
+ * Another way this can be done is using level order traversal and taking the sum of 
+ * all the first node in each level.
  */
 import LevelOne.TreeNode;
 

@@ -42,7 +42,9 @@ public class MergeTwoSortedList {
 		if(l2 == null){
 			return l1;
 		}
-		
+		/*
+		 * Here we just declare a dummy head.Not initialize it.
+		 */
 		ListNode newHead;
 		
 		if(l1.data < l2.data){

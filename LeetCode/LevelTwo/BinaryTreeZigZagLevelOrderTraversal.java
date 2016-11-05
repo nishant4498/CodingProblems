@@ -38,7 +38,9 @@ public class BinaryTreeZigZagLevelOrderTraversal {
 				if (node.right != null) {
 					queue.offer(node.right);
 				}
-
+				/*
+				 * This part is important.
+				 */
 				if (level % 2 == 0) {
 					currLevelList.add(node.data);
 				} else {

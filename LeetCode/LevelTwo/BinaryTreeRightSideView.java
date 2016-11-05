@@ -33,7 +33,7 @@ public class BinaryTreeRightSideView {
 				if (curr.right != null) {
 					q.offer(curr.right);
 				}
-
+				
 				if (i == levelCount - 1) {
 					result.add(curr.data);
 				}

@@ -21,7 +21,7 @@ public class RegularExpressions {
 	
 	public static void digitPattern(){
 		String pattern = "\\d"; // "[0-9]"
-		Pattern p = Pattern.compile(pattern);// predefined class for digits
+		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher("ni12s3ha5n7t");
 		
 		while(m.find()){
@@ -31,7 +31,7 @@ public class RegularExpressions {
 	}
 	
 	public static void characterPattern(){
-		String pattern = "^[0-9]"; // "[0-9]"
+		String pattern = "[a-z]";
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher("ni12s3haABCZ5n7t");
 		
@@ -46,8 +46,9 @@ public class RegularExpressions {
 		 *\\b defines word boundaries.  \\bcat\\b will only find cat as a complete word.
 		 *\\bcat\\B will be able to find cat where cat is a prefix(only considering first word boundry)
 		 *\\Bcat\\B can find wherever cat is a substring(neither neginning nor ending)
+		 *"(cat)" gives cat wherever it occurs.
 		 */
-		String pattern = "\\Bcat\\B"; 
+		String pattern = "\\bcat\\b"; 
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher("cat is on the caty cat oncaty");
 		

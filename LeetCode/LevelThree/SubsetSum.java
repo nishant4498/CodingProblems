@@ -19,7 +19,7 @@ public class SubsetSum {
 		
 		
 		/*
-		 * When the sum requied is zero it can be fulfilled with and empty set.
+		 * When the sum required is zero it can be fulfilled with and empty set.
 		 */
 		
 		for(int i =0; i<= input.length;i++){
