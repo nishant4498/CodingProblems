@@ -7,41 +7,51 @@ import LevelOne.ListNode;
  */
 public class PalindromeLinkedList {
 	public boolean isPalindromeList(ListNode head) {
-        
-	    if(head == null || head.next == null) { return true;}
-	    
-	    ListNode start = new ListNode(0);
-	    start.next = head;
-	    ListNode firstHalfStart = head;
-	    ListNode secondHalfStart = head;
-	    ListNode fast = head;
-	    
-	    // Traverse to mid node and Reverse the First half of the LinkedList in the same run
-	    while(fast.next != null && fast.next.next != null) {
-	        fast = fast.next.next;
-	        
-	        start.next = secondHalfStart.next;
-	        secondHalfStart.next = secondHalfStart.next.next;
-	        start.next.next = firstHalfStart;
-	        
-	        firstHalfStart = start.next;
-	    }
-	    
-	    // Offset for odd number of elements
-	    // As the mid node is common to both halves, this should be skipped
-	    if(fast.next == null) {
-	        firstHalfStart = firstHalfStart.next;
-	    }
-	    
-	    // At the end of the previous loop, SecondHalfStart pointer is still stuck on the end of the first half
-	    // Shift it by one to take it to the start of the SecondHalf
-	    secondHalfStart = secondHalfStart.next;
-	    
-	    while(secondHalfStart != null) {
-	        if(firstHalfStart.data != secondHalfStart.data) { return false;}
-	        secondHalfStart = secondHalfStart.next;
-	        firstHalfStart = firstHalfStart.next;
-	    }
-	    return true;
+		if (head == null || head.next == null) {
+			return true;
+		}
+		
+		ListNode slow = head;
+		ListNode fast = head;
+		
+		while(fast.next != null && fast.next.next != null){
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		/*
+		 * Slow points to the mid element so we need to move it one further.
+		 */
+		ListNode secondHead = slow.next;
+		slow.next = null;
+		
+		ListNode p1 = secondHead;
+		ListNode p2 = secondHead.next;
+		
+		while(p2 != null){
+			ListNode nextTemp = p2.next;
+			p2.next = p1;
+			p1 = p2;
+			p2 = nextTemp;			
+		}
+		
+		secondHead.next = null;
+		
+		ListNode p = (p2 == null)? p1 : p2;
+		ListNode q = head;
+		/*
+		 * Here p is assigned the second half of the linked list.So length of p will be equal to q in case 
+		 * of even length lists and one less tha q(first half) in case of odd length list.
+		 * This is why checking p != null takes care of both odd/even lists. 
+		 */
+		while(p != null){
+			if(p.data != q.data){
+				return false;
+			}
+			
+			p = p.next;
+			q = q.next;
+		}
+
+		return true;
 	}
 }
