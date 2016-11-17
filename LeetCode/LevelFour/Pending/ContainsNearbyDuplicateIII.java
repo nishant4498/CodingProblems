@@ -1,4 +1,4 @@
-package LevelFour;
+package LevelFour.Pending;
 
 public class ContainsNearbyDuplicateIII {
 

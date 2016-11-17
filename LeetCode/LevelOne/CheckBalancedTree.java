@@ -10,7 +10,7 @@ public class CheckBalancedTree {
     }
     /*
      * This is a customized height method for checking balanced tree which returns
-     * error whenever the diff in height is more than one in any level.
+     * error whenever the diff in height is more than one at any level.
      */
     public int getHeight(TreeNode root){
         if(root == null) 
@@ -18,14 +18,14 @@ public class CheckBalancedTree {
         
         /*
          * Here we can't write leftHeight = 1 + getHeight(root.left), since whenever min 
-         * value is returned it will get added by 1 and thus never false answer.
+         * value is returned it will get added by 1 and thus condition at line 30 will never be met.
          * Also we dont need to check any further when we find that some node is not balanced.
          */
         int leftHeight = getHeight(root.left);
         /*
          * Its very important to check this condition here since , it might be possible that both
          * left and right return min value. In this case their diff will be zero and thus
-         * we will return true when we need to rerturn false
+         * we will return true when we need to return false
          */
         if(leftHeight == Integer.MIN_VALUE) return Integer.MIN_VALUE;
         

@@ -1,6 +1,7 @@
 package LevelOne;
 /*
  * https://leetcode.com/problems/range-sum-query-immutable/
+ * The important point
  */
 public class RangeSumQueryDP {
 	private int[] sum;

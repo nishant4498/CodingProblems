@@ -62,7 +62,6 @@ public class PartitionList {
             }
             curr = next;
         }
-        if(beforeEnd != null) beforeEnd.next = null;
         
         if (afterEnd != null) afterEnd.next = null;
         if(beforeStart == null) return afterStart;

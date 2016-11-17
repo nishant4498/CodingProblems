@@ -30,6 +30,7 @@ public class BinaryTreeRootToLeafPaths {
 		
 		if(root.left == null && root.right == null){
 			result.add(sb.toString());
+			// here we can't return as in ListPathWithSum
 		}else{
 			sb.append("->");
 			findPaths(root.left, result, sb);

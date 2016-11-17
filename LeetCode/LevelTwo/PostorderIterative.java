@@ -16,6 +16,9 @@ public class PostorderIterative {
 	 * 2) Move root to s2. Push its left child to s1 and then right child to s1.
 	 * 3) Repeat
 	 * 4) The resulting order is contained in s2. Put all the elemnets to list.
+	 * 
+	 * One important point to note in Postorder Iterative is that we don't append the result to a list
+	 * as we pop the elements.The final result order lies in the stack s2.
 	 */
 	
 	public List<Integer> postorderTraversalTwoStacks(TreeNode root) {

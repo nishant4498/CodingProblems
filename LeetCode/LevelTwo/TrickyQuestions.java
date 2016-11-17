@@ -2,6 +2,7 @@ package LevelTwo;
 
 public class TrickyQuestions {
 	/*
+	 * DiameterOfTree
 	 * BinaryTreeRootToLeafPaths
 	 * BinaryTreeZigZagLevelOrderTraversal
 	 * CountCompleteTreeNodes
@@ -17,5 +18,7 @@ public class TrickyQuestions {
 	 * PalindromeLinkedList
 	 * ValidPalindrome
 	 * SumOfLeftLeaves
+	 * PostorderIterative
+	 * PreorderIterative
 	 */
 }

@@ -1,6 +1,9 @@
 package LevelTwo;
-/*
+/**
  * https://leetcode.com/problems/count-complete-tree-nodes/
+ * We are given that the binary tree is complete(In a complete binary tree every level, 
+ * except possibly the last, is completely filled, and all nodes in the last level are as 
+ * far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.).
  * Complexity log(n) * log(n)
  * It first walks all the way left and right to determine the height and whether it's a full tree, 
  * meaning the last row is full. If so, then the answer is just 2^height-1. 
@@ -24,7 +27,7 @@ public class CountCompleteTreeNodes {
 	      if(leftHeight == rightHeight){
 	    	  /**
 	    	   * Math.pow(2,h) -1 - Problem with this it needs double as parameter and returns double
-	    	   * (2 << h-1) - 1  - 
+	    	   * (2 << h-1) - 1
 	    	   */
 	          return (1 << leftHeight) - 1;  
 	      }else{

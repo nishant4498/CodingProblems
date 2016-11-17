@@ -2,6 +2,7 @@ package LevelFour;
 /*
  * https://leetcode.com/problems/missing-number/
  * CTCI - 17.4
+ * Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
  */
 public class MissingNumber {
 	/*
@@ -24,7 +25,7 @@ public class MissingNumber {
 	
 	/*
 	 * In this solution we simply do a bitwise XOR with numbers from 1 to n with the given numbers.
-	 * Thus in the ned only one number will be left which is missing since all others will appear
+	 * Thus in the end only one number will be left which is missing since all others will appear
 	 * twice.
 	 */
 	public static int missingNumberBitwise(int[] nums) {
@@ -33,6 +34,10 @@ public class MissingNumber {
 
         int missingNum = 0;
         
+        /*
+         * Point to note is , its all XOR
+         * Basically the equation is => missingNum = missingNum ^ (i+1) ^ nums[i];
+         */
         for(int i =0 ; i < n ; i++){
             missingNum ^= (i+1) ^ nums[i];
         }

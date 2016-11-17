@@ -24,6 +24,9 @@ public class PalindromeLinkedList {
 		ListNode secondHead = slow.next;
 		slow.next = null;
 		
+		/*
+		 * Reverse the second list.
+		 */
 		ListNode p1 = secondHead;
 		ListNode p2 = secondHead.next;
 		
@@ -36,7 +39,7 @@ public class PalindromeLinkedList {
 		
 		secondHead.next = null;
 		
-		ListNode p = (p2 == null)? p1 : p2;
+		ListNode p = p1;
 		ListNode q = head;
 		/*
 		 * Here p is assigned the second half of the linked list.So length of p will be equal to q in case 

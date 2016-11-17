@@ -11,5 +11,8 @@ public class TrickyQuestions {
 	 * RemoveDuplicatesSortedList
 	 * RemoveElementArray  Boundary Conditions
 	 * ReverseLinkedList - Recursion
+	 * InorderSuccesorBST
+	 * ValidateBST
+	 * TriePrefixTreeImplementation
 	 */
 }

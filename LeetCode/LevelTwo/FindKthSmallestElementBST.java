@@ -44,11 +44,10 @@ public class FindKthSmallestElementBST {
 		return result.get(k-1);
 	}
 	
-	private List<Integer> inorderList(TreeNode root, List<Integer> result){
-		if (root == null) return null;
+	private void inorderList(TreeNode root, List<Integer> result){
+		if (root == null) return;
 		inorderList(root.left, result);
 		result.add(root.data);
 		inorderList(root.right, result);
-		return result;
 	}
 }
