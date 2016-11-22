@@ -20,13 +20,22 @@ public class LongestCommonSubsequence {
 				if(i == 0 || j ==0 ){
 					LCS[i][j] = 0;
 				}else{
-					/*
+					/**
 					 * We use i-1 since the total size of the LCS is one greater than the length of strings
 					 * and thus the character at index 0 in the string will be at index 1 in the array.
 					 */
 					if(x.charAt(i-1) == y.charAt(j-1)){
+						/**
+						 * This means that if the last charcters match, then we take the 
+						 * LCS as 1 + the length found till now without those two leters.
+						 */
 						LCS[i][j] = 1 + LCS[i-1][j-1]; 
 					}else{
+						/**
+						 * When the last characters do not macth then we take the maximum of these values:
+						 * 1) Taking the length after ignoring the last charater of x and taking full y.
+						 * 2) Taking the length after ignoring the last charater of y and taking full x.  
+						 */
 						LCS[i][j] = Math.max(LCS[i-1][j], LCS[i][j-1]);
 					}
 				}

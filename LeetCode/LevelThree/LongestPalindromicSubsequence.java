@@ -29,7 +29,7 @@ public class LongestPalindromicSubsequence {
 		for(int k =3; k <= n; k++){
 			for(int i =0; i< n-k+1; i++){
 				int j = i + k -1;
-				if(s.charAt(i) == s.charAt(j)){ //Here we do not check for LPS[i + 1][j - 1] as in case of subsequence.  
+				if(s.charAt(i) == s.charAt(j)){ //Here we do not check for LPS[i + 1][j - 1] as in case of substring.  
 					LPS[i][j] = 2 + LPS[i+1][j-1];
 				}else{
 					LPS[i][j] = Math.max(LPS[i+1][j], LPS[i][j-1]);// This is different than substring.

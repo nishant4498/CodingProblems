@@ -5,7 +5,7 @@ import LevelOne.ListNode;
 /**
  * https://leetcode.com/problems/swap-nodes-in-pairs/
  * 
- * We take a dummyHead that acts as a prev node.We need to swp the node in pairs, so we need to keep track 
+ * We take a dummyHead that acts as a prev node.We need to swap the node in pairs, so we need to keep track 
  * of the prev node which will point to the swapped node
  * In each loop we need three pointer changes:
  * 1) prev points to the curr's next.
