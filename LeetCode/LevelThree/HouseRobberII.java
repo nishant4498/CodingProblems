@@ -24,6 +24,9 @@ public class HouseRobberII {
 	}
 
 	public int rob(int[] nums, int i, int j) {
+		/*
+		 * This handles the case when therevare just two elements.
+		 */
 		if (i == j)
 			return nums[i];
 

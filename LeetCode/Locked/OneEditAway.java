@@ -4,27 +4,27 @@ public class OneEditAway {
 
 	public static void main(String[] args) {
 		System.out.println(oneEditAwayModular("apple", "aple"));
+		System.out.println(oneEditAwayModular("aple", "apple"));
+		System.out.println(oneEditAwayModular("kpple", "apple"));
 	}
 	
-	public static boolean oneEditAwayModular(String first, String second){
-		int lenFirst = first.length();
-		int lenSecond = second.length();
-		
-		if(lenFirst == lenSecond) 
+	public static boolean oneEditAwayModular(String first, String second) {
+		if (first == null || second == null || Math.abs(first.length() - second.length()) > 1)
+			return false;
+
+		if (first.length() == second.length())
 			return oneEditReplace(first, second);
-		else if(lenFirst + 1 == lenSecond)
+		else if (first.length() > second.length())
 			return oneEditInsert(second, first);
-		else if(lenFirst -1 == lenSecond)
+		else
 			return oneEditInsert(first, second);
-		
-		return false; // If diff in length is more than 1 return false
 	}
 	/*
 	 * If there are more than one different chracters just return false
 	 */
 	public static boolean oneEditReplace(String s1, String s2){
 		boolean foundDifference = false;
-		for(int i =0; i < s1.charAt(i); i++){
+		for(int i =0; i < s1.length(); i++){
 			if(s1.charAt(i) != s2.charAt(i)){
 				if (foundDifference){
 					return false;

@@ -27,23 +27,13 @@ public class PalindromeLinkedList {
 		/*
 		 * Reverse the second list.
 		 */
-		ListNode p1 = secondHead;
-		ListNode p2 = secondHead.next;
+		ListNode revHead = reverseList(secondHead);
 		
-		while(p2 != null){
-			ListNode nextTemp = p2.next;
-			p2.next = p1;
-			p1 = p2;
-			p2 = nextTemp;			
-		}
-		
-		secondHead.next = null;
-		
-		ListNode p = p1;
+		ListNode p = revHead;
 		ListNode q = head;
 		/*
 		 * Here p is assigned the second half of the linked list.So length of p will be equal to q in case 
-		 * of even length lists and one less tha q(first half) in case of odd length list.
+		 * of even length lists and one less than q(first half) in case of odd length list.
 		 * This is why checking p != null takes care of both odd/even lists. 
 		 */
 		while(p != null){
@@ -56,5 +46,20 @@ public class PalindromeLinkedList {
 		}
 
 		return true;
+	}
+	
+	public ListNode reverseList(ListNode head){
+		ListNode prev = null;
+		ListNode curr = head;
+		ListNode nextTemp = null;
+		
+		while(curr != null){
+			nextTemp = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = nextTemp;
+		}
+		
+		return prev;
 	}
 }

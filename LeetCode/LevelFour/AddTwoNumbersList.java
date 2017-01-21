@@ -14,7 +14,7 @@ public class AddTwoNumbersList {
 		int carry = 0;
 		
 		while(p != null || q != null){
-			int sum = carry; // Initilaize sum with the carry coming from the prevous result
+			int sum = 0;
 			
 			if (p != null) {
 				sum += p.data;
@@ -26,6 +26,8 @@ public class AddTwoNumbersList {
 				q = q.next;
 			}
 			
+			sum += carry;
+			
 			ListNode result = new ListNode(sum % 10);
 			tail.next = result;
 			tail = tail.next;
@@ -36,8 +38,10 @@ public class AddTwoNumbersList {
 		 */
 		if(carry > 0){
 			tail.next = new ListNode(1);
+			tail = tail.next;
 		}
 		
+		tail.next = null;
 		return dummyHead.next;
 	}
 }

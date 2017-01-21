@@ -6,7 +6,7 @@ package LevelFour;
  * http://www.cs.utexas.edu/~moore/best-ideas/mjrty/example.html
  * 
  * The idea here is to keep a counter and keep incrementing it whenever we see the same element.
- * If the element if=s diiferent we decrement the counter.
+ * If the element is diiferent we decrement the counter.
  * When the counter becomes zero, we set the next element as majority element. 
  */
 public class MajorityElement {

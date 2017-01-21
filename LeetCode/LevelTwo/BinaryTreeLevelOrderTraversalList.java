@@ -72,8 +72,7 @@ public class BinaryTreeLevelOrderTraversalList {
 				}
 				currLevel.add(node.data);
 			}
-			result.add(currLevel);
-				
+			result.add(currLevel);				
 		}		
 		return result;
 	}

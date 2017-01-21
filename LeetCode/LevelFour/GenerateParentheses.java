@@ -24,8 +24,8 @@ public class GenerateParentheses {
 	 */
 	public void helper(List<String> result, StringBuilder sb, int left, int right){
 		/**
-		 * This condition is very important since at any point the number of left should be higher
-		 * than that of right.
+		 * This condition is very important since at any point the number of left should be either equal to or
+		 * lesser than that of remaining rights.
 		 */
 		if(left > right){
 			return;

@@ -42,8 +42,5 @@ public class SubsetSum {
 		}
 		
 		return dp[input.length][sum];
-	}	
-	
-	
-
+	}
 }

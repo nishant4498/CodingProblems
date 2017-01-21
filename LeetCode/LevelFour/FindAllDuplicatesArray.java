@@ -9,7 +9,7 @@ import java.util.List;
  * Find all the elements that appear twice in this array.
  * 
  * We utilize the fact here that the numbers are in the range 1 to n, where n is the length of the array.
- * Thus if the max element of the array is 8, the range of array will be 0-7.
+ * Thus if the max element of the array is 8, the index of array will be 0-7.
  * We just set the number negative at its index e.g if we find a number two, we set the index 1(2-1) as negative.
  * Whenever we encounter two again, if check index 1, we can figure out that 2 was seen  earlier.So store it as result.
  */

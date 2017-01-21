@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class LetterCombinationsOfPhoneNumber {
 	public static void main(String[] args) {
-		letterCombinations("2");
+		letterCombinations("23");
 	}
 	public static List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<>();
@@ -28,7 +28,7 @@ public class LetterCombinationsOfPhoneNumber {
     }
     
     public static void helper(List<String> result, StringBuilder sb, String digits, int index, Map<Character,String> keyMap){
-        if(index > (digits.length() - 1)) {
+        if(index == digits.length()) {
             result.add(sb.toString());
             return;
         }
@@ -54,7 +54,6 @@ public class LetterCombinationsOfPhoneNumber {
         map.put('7', "pqrs");
         map.put('8', "tuv");
         map.put('9', "wxyz");
-        map.put('0', "");
         return map;
     }
 }

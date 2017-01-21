@@ -10,7 +10,6 @@ public class TriePrefixTreeImplementation {
 		System.out.println(trie.search("nishant"));
 		System.out.println(trie.startsWith("nish"));
 	}
-
 }
 
 class TrieNode{

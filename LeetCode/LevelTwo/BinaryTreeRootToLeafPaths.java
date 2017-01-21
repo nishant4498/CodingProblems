@@ -24,7 +24,9 @@ public class BinaryTreeRootToLeafPaths {
 		if(root == null){
 			return;
 		}
-		
+		/**
+		 * Need to compute the length before appending.
+		 */
 		int length = sb.length();
 		sb.append(root.data);
 		
@@ -36,7 +38,9 @@ public class BinaryTreeRootToLeafPaths {
 			findPaths(root.left, result, sb);
 			findPaths(root.right, result, sb);
 		}
-		
+		/**
+		 * Need to reset the length in the end.
+		 */
 		sb.setLength(length);
 	}
 }
