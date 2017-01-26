@@ -1,6 +1,8 @@
 package ModerateProblems;
-
-public class SwapNumber {
+/**
+ * CTCI 16.1
+ */
+public class NumberSwapper {
 
 	public static void main(String[] args) {
 		int a = 5, b = 10;

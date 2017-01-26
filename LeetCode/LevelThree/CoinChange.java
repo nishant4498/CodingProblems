@@ -24,7 +24,7 @@ public class CoinChange {
 		/*
 		 * We have two conditions before we compare 1) j >= coins[i] - This
 		 * means that the value of the coin should be less than or equal to the
-		 * amount for which we are comparing. 2) dp[j - coins[j - coins[i]]]
+		 * amount for which we are comparing. 2) dp[j - coins[i]]
 		 * should not still be infinity(or max value). This means that we cannot
 		 * form the amount using this coin as the prevoius value was not formed.
 		 */

@@ -20,7 +20,7 @@ import java.util.Map;
  * 			  and update it as head
  *          - If not, create a new node,put it in the cache and set it as head.
  *          - Before inserting the new node, if cache reached its capacity, remove the last node 
- *            from LL and cache both. 
+ *            from LL and cache. 
  */
 public class LRUCache {
 	public Map<Integer, Node> cache = new HashMap<>();
