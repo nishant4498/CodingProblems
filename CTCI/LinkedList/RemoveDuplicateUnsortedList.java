@@ -1,5 +1,10 @@
 package LinkedList;
-
+/*
+ * From an unsorted list we need to remove the duplicate elements.
+ * 
+ * As a followup its given if we can do this without extra space. In that case, for every element 
+ * we need to check the list and then remove that element. O(n^2);
+ */
 import java.util.HashSet;
 import java.util.Set;
 

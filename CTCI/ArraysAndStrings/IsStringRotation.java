@@ -1,5 +1,11 @@
 package ArraysAndStrings;
-
+/**
+ * s1 = xy = waterbottle x = wat y = erbottle
+ * s2 = yx = erbottlewat
+ * 
+ * regradles of where we break, xy will always be a substring of xyxy
+ *
+ */
 public class IsStringRotation {
 	public boolean isRotation(String s1, String s2){
 		int len = s1.length();

@@ -23,7 +23,7 @@ public class RemoveNthNodeEndLL {
 		//Move the first pointer n+1 steps(starting from dummy node) so that the gap is of n nodes.
 		
 		for(int i =1; i<= n+1 ; i++){
-			if (first == null) return null; 
+			if (first == null) return null; // This should always be checked first.
 			first = first.next;
 		}
 		

@@ -1,5 +1,9 @@
 package ArraysAndStrings;
-
+/**
+ * Replace all spaces in a string with %20.
+ * String has additional spaces in the end to hold additional characters.
+ * Actual length of the string is given.
+ */
 public class URLify {
 
 	public static void main(String[] args) {

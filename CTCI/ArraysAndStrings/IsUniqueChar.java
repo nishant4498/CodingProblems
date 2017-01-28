@@ -30,10 +30,15 @@ public class IsUniqueChar {
 		return true;
 	}
 
-	/*
+	/**
 	 * Bitwise solution assumes that we have only small letters a-z, thus we
 	 * have 26 characters at max. Thus we can fir into a single bit vector. i.e
 	 * if we use int it is 32 bit and thus we can accomodate 26 characters.
+	 * 
+	 * Very similar to the above solution.
+	 * Here we set the bit for every char position when we encounter a char.
+	 * Then we check if a bit is alraedy set at a position, we return false,
+	 * since that character has alraedy been encountered.
 	 */
 	public static boolean isUniqueCharBitwise(String str){
 		int checker = 0;

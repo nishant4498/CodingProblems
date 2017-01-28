@@ -1,5 +1,8 @@
 package StacksAndQueues;
-
+/**
+ * Basically the idea here is while pushing the elemnts in the buffer stack,
+ * we make sure we are pushing in the sorted order.
+ */
 import java.util.Stack;
 
 public class SortStack {
@@ -26,16 +29,15 @@ public class SortStack {
 
 	}
 	
-	public static Stack<Integer> sortStack(Stack<Integer> originalStack){
-		Stack<Integer> bufferStack = new Stack<Integer>();
-		while(!originalStack.isEmpty()){
-			int temp = originalStack.pop();
-			while(!bufferStack.isEmpty() && bufferStack.peek() < temp){
-				originalStack.push(bufferStack.pop());
+	public static Stack<Integer> sortStack(Stack<Integer> s){
+		Stack<Integer> r = new Stack<Integer>();
+		while(!s.isEmpty()){
+			int temp = s.pop();
+			while(!r.isEmpty() && r.peek() < temp){
+				s.push(r.pop());
 			}
-			bufferStack.push(temp);
+			r.push(temp);
 		}
-		return bufferStack;
+		return r;
 	}
-
 }

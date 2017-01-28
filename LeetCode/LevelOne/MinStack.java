@@ -1,11 +1,12 @@
 package LevelOne;
 import java.util.Stack;
 /*
+ * https://leetcode.com/problems/min-stack/
  * Also check the CTCI approach if you get time.
  */
 public class MinStack {
-	long min;
-	Stack<Long> stack;
+	private long min;
+	private Stack<Long> stack;
 
 	public MinStack() {
 		stack = new Stack<>();

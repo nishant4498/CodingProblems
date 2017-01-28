@@ -2,8 +2,8 @@ package StacksAndQueues;
 
 import java.util.LinkedList;
 
-public class AnimalShelter {
-
+public class AnimalShelter{
+	
 }
 
 abstract class Animal{
@@ -23,6 +23,9 @@ abstract class Animal{
 	}
 	
 	public boolean isOlderThan(Animal a){
+		/**
+		 * The order should be smaller for older animals.
+		 */
 		return this.order < a.order;
 	}
 	
@@ -32,7 +35,6 @@ class AnimalQueue{
 	private LinkedList<Dog> dogs = new LinkedList<>();
 	private LinkedList<Cat> cats = new LinkedList<>();
 	int order = 0;
-	
 	
 	public void enqueue(Animal a){
 		order++;
@@ -67,9 +69,7 @@ class AnimalQueue{
 	
 	public Cat dequeueCats(){
 		return cats.poll();
-	}
-	
-	
+	}	
 }
 
 class Dog extends Animal{

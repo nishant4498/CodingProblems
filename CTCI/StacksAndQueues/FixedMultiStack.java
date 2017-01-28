@@ -1,5 +1,7 @@
 package StacksAndQueues;
-
+/**
+ * Use single array to implement three stacks.
+ */
 import java.util.EmptyStackException;
 
 public class FixedMultiStack {
@@ -57,7 +59,6 @@ public class FixedMultiStack {
 }
 
 class FullStackException extends Exception{
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = 1L;	
 }
 
