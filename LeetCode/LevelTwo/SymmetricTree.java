@@ -1,4 +1,4 @@
-package LevelOne;
+package LevelTwo;
 /* https://leetcode.com/problems/symmetric-tree/
  * Checks if a given tree is symmtric or not.
  * Basically it checks whether the tree is a mirror of itself or not.

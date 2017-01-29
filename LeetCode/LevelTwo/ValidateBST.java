@@ -1,30 +1,10 @@
-package LevelOne;
+package LevelTwo;
 /* https://leetcode.com/problems/validate-binary-search-tree/
  * Check whether a given tree is Binary Search Tree or not.
  * left.data <= node.data < right.data
  */
 public class ValidateBST {
 	public long lastVistedValue = Long.MIN_VALUE;	
-	
-	/*
-	 * This method while checking the nodes inorder stores the previous node value.
-	 * If current value at any level is less than previous value, we return false;
-	 */
-	public boolean checkBSTInorder(TreeNode root){
-		if(root == null) return true;
-		
-		if(!checkBSTInorder(root.left)) return false;
-		
-		if(root.data < lastVistedValue){
-			return false;
-		}
-		
-		lastVistedValue = root.data;
-		
-		if(!checkBSTInorder(root.right)) return false;
-		
-		return true;
-	}
 	/*
 	 * Initially the min/max range is taken as the maximum possible.
 	 * After then we use the property of BST, 
@@ -45,5 +25,25 @@ public class ValidateBST {
 		if(node.data <= minValue || node.data > maxValue) return false;
 		
 		return checkBST(node.left, minValue, node.data) && checkBST(node, node.data, maxValue);
+	}
+	
+	/*
+	 * This method while checking the nodes inorder stores the previous node value.
+	 * If current value at any level is less than previous value, we return false;
+	 */
+	public boolean checkBSTInorder(TreeNode root){
+		if(root == null) return true;
+		
+		if(!checkBSTInorder(root.left)) return false;
+		
+		if(root.data < lastVistedValue){
+			return false;
+		}
+		
+		lastVistedValue = root.data;
+		
+		if(!checkBSTInorder(root.right)) return false;
+		
+		return true;
 	}
 }

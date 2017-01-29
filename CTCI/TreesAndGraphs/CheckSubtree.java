@@ -1,4 +1,7 @@
 package TreesAndGraphs;
+
+import LevelTwo.TreeNode;
+
 /*
  * The problem is to find whether one Tree T2 is a subtree of a bigger Tree T1
  * There are two approaches:
@@ -12,6 +15,7 @@ public class CheckSubtree {
 	/*
 	 * Approach one
 	 * Time complexity = O(m + n)
+	 * Space Complexity = O(m + n)
 	 */
 	public boolean checkSubtreePreorder(TreeNode t1, TreeNode t2){
 		StringBuilder string1 = new StringBuilder();

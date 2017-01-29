@@ -1,4 +1,8 @@
 package LevelTwo;
+/**
+ * https://leetcode.com/problems/binary-tree-level-order-traversal/
+ * CTCI 4.3
+ */
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +12,34 @@ import java.util.LinkedList;
 import LevelOne.TreeNode;
 
 public class BinaryTreeLevelOrderTraversalList {
-	/* https://leetcode.com/problems/binary-tree-level-order-traversal/
+	
+	public List<List<Integer>> levelOrderListWay(TreeNode root){
+		List<List<Integer>> result = new ArrayList<>();
+		if(root == null){
+			return result;
+		}
+		Queue<TreeNode> myQueue = new LinkedList<TreeNode>();
+		myQueue.offer(root);
+		
+		while(!myQueue.isEmpty()){
+			int levelCount = myQueue.size();			
+			List<Integer> currLevel = new ArrayList<>();
+			for(int i =0; i < levelCount ; i++){
+				TreeNode node = myQueue.poll();
+				if(node.left != null){
+					myQueue.offer(node.left);
+				}
+				if(node.right != null){
+					myQueue.offer(node.right);
+				}
+				currLevel.add(node.data);
+			}
+			result.add(currLevel);				
+		}		
+		return result;
+	}	
+	
+	/* 
 	 * 1. If root is null, return empty list.
 	 * 2. Add the root and the delimiter to the queue.
 	 * 3. Pop the queue and add the value to the current level list.
@@ -51,29 +82,5 @@ public class BinaryTreeLevelOrderTraversalList {
 		return result;
 	}
 	
-	public List<List<Integer>> levelOrderListWay(TreeNode root){
-		List<List<Integer>> result = new ArrayList<>();
-		if(root == null){
-			return result;
-		}
-		Queue<TreeNode> myQueue = new LinkedList<TreeNode>();
-		myQueue.offer(root);
-		
-		while(!myQueue.isEmpty()){
-			int levelCount = myQueue.size();			
-			List<Integer> currLevel = new ArrayList<>();
-			for(int i =0; i < levelCount ; i++){
-				TreeNode node = myQueue.poll();
-				if(node.left != null){
-					myQueue.offer(node.left);
-				}
-				if(node.right != null){
-					myQueue.offer(node.right);
-				}
-				currLevel.add(node.data);
-			}
-			result.add(currLevel);				
-		}		
-		return result;
-	}
+	
 }

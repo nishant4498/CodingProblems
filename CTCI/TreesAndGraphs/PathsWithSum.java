@@ -1,6 +1,8 @@
 package TreesAndGraphs;
 
 import java.util.HashMap;
+
+import LevelTwo.TreeNode;
 /*
  * Do a sample run on some graph to understand more clearly on the decrement hash table function.
  */

@@ -1,14 +1,11 @@
-package TreesAndGraphs;
-
+package LevelTwo;
 public class TreeNode {
 	public int data;
 	public TreeNode left;
 	public TreeNode right;
 	public TreeNode parent;
-	
-	public TreeNode(int value){
-		this.data = value;
-		this.left = null;
-		this.right = null;
+
+	public TreeNode(int x) {
+		data = x;
 	}
 }

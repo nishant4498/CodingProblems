@@ -1,4 +1,4 @@
-package LevelOne;
+package LevelTwo;
 /*
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * The diff between LCA of a binary tree and BST is - in BST we can use the property that left is

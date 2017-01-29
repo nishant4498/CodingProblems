@@ -1,4 +1,4 @@
-package LevelOne;
+package LevelTwo;
 
 /*
  * If the Node has right child then the Succesor will be found on the left most child of right 
