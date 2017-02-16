@@ -27,14 +27,16 @@ public class ValidParentheses {
 			if(map.keySet().contains(curr)){
 				s.push(curr);
 			}else{
+				/**
+				 * Checking the stack is empty is very important condition here.
+				 */
 				if(!s.isEmpty() && map.get(s.peek()) == curr){
 					s.pop();
 				}else{
 					return false;
 				}
 			}
-		}
-		
+		}		
 		return s.isEmpty();
 	}
 }

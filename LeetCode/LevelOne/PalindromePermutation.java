@@ -1,4 +1,9 @@
-package ArraysAndStrings;
+package LevelOne;
+/**
+ * Given a string check if it is a permutation of a palindrome. 
+ */
+import java.util.HashSet;
+import java.util.Set;
 
 public class PalindromePermutation {
 
@@ -40,6 +45,26 @@ public class PalindromePermutation {
 		}
 		return true;
 	}
+	/**
+	 *	 In this method we maintain a set to add and remove the character from set.
+	 *   In the end for a valid palindrome permutation, set.size() == 0(even) 1(odd chars)
+	 */
+	public static boolean isPalindromePermLeetCode(String str){
+		Set<Character> set = new HashSet<>();
+		
+		for(int i = 0; i< str.length(); i++){
+			char c = str.charAt(i);
+			if(set.contains(c)){
+				set.remove(c);
+			}else{
+				set.add(c);
+			}
+		}
+		
+		return set.size() == 0 || set.size() == 1;
+	}
+	
+	
 	/*
 	 * No need to stress more on this method.	 * 
 	 * When increasing the char count, also maintain a count of number of odd chars.

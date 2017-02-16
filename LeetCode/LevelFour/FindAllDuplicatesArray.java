@@ -25,7 +25,7 @@ public class FindAllDuplicatesArray {
         List<Integer> result = new ArrayList<>();
         for(int i =0; i< nums.length; i++){
         	/*
-        	 * Since the numbers are in range 0-n, index will be in range 0-n-1;
+        	 * Since the numbers are in range (1,n), index will be in range (0,n-1)
         	 */
             int index = Math.abs(nums[i]) -1;
             if(nums[index] < 0){

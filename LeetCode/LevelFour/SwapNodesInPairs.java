@@ -11,6 +11,10 @@ import LevelOne.ListNode;
  * 1) prev points to the curr's next.
  * 2) curr's next points to the curr
  * 3) curr points to the curr.next.next
+ * 
+ * Important points: 
+ * 1) We start with the dummynode as the curr node and then in the loop we set it to prev.
+ * 2) Basically at the beginning of each pair swap, curr points to the previous node.
  */
 public class SwapNodesInPairs {
 	public ListNode swapPairs(ListNode head) {

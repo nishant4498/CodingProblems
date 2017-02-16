@@ -13,7 +13,7 @@ public class MergeTwoSortedList {
 		ListNode dummy = new ListNode(0);
 		ListNode tail = dummy;
 		
-		while(l1 != null && l2 != null){
+		while(l1 != null && l2 != null){ // Condition confused with AddTwoNumbersList
 			if(l1.data < l2.data){
 				tail.next = l1;
 				l1 = l1.next;

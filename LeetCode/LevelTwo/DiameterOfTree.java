@@ -4,7 +4,7 @@ package LevelTwo;
  * 
  * The time complexity of this approach is O(n^2).
  * We can optimize this to O(n) by computing the height in the 
- * ssame call rather than calling seaparately.
+ * same call rather than calling seaparately.
  */
 import LevelOne.TreeNode;
 
@@ -21,7 +21,10 @@ public class DiameterOfTree {
 		int maxDiameter = Math.max(leftDiameter , rightDiameter);
 		return Math.max(lHeight + rHeight + 3, maxDiameter);		
 	}
-	
+	/**
+	 * When we return -1, then height is the length of the longest path from root to leaf node.
+	 * When we return 0, height is the number of nodes in the longest path from root to leaf.
+	 */
 	public int height(TreeNode root){
 		if(root == null) return -1;
 		

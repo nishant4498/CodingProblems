@@ -6,8 +6,8 @@ import java.util.List;
 import LevelOne.TreeNode;
 
 /**
- * https://leetcode.com/problems/sum-root-to-leaf-numbers/ An example is the
- * root-to-leaf path 1->2->3 which represents the number 123.Find the total sum
+ * https://leetcode.com/problems/sum-root-to-leaf-numbers/ 
+ * An example is the root-to-leaf path 1->2->3 which represents the number 123.Find the total sum
  * of all root-to-leaf numbers.
  */
 public class BinaryTreeSumRootToLeafNumbers {

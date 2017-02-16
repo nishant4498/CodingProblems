@@ -1,9 +1,11 @@
 package LevelThree;
 
-/*
+/**
  * https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/SubsetSum.java
  * https://www.youtube.com/watch?v=s6FhG--P7z0 
  * The first row in the video is not initialized..It should be all false.
+ * 
+ * Same as CoinChange
  */
 
 public class SubsetSum {

@@ -53,6 +53,9 @@ public class LRUCache {
 			if (cache.size() >= capacity) {
 				/**
 				 * the key must be first removed from cache before deleting the tail.
+				 * The reason here is we are using the tail reference, and once we 
+				 * remove(tail) - this also updates tail to the previous node.Thus we won't be able
+				 * to delete the same node from the cache.
 				 */
 				cache.remove(tail.key);
 				remove(tail);

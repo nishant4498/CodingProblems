@@ -1,5 +1,7 @@
 package LevelTwo;
-
+/**
+ * https://leetcode.com/problems/sort-list/
+ */
 import LevelOne.ListNode;
 
 public class MergeSortLinkedList {
@@ -13,18 +15,18 @@ public class MergeSortLinkedList {
 		llist.push(20);
 		llist.push(3);
 		llist.push(2);
-
-		llist.head = llist.mergeSort(llist.head);
-		llist.printList(llist.head);
-
-		System.out.println();
+		
+		LinkedList.printList(llist.head);
+		ListNode a = llist.mergeSort(llist.head);		
+		LinkedList.printList(a);
 
 		LinkedList llist1 = new LinkedList();
 		llist1.push(3);
 		llist1.push(2);
 		llist1.push(4);
-		llist1.head = llist1.mergeSort(llist1.head);
-		llist1.printList(llist1.head);
+		LinkedList.printList(llist1.head);
+		ListNode b = llist1.mergeSort(llist1.head);		
+		LinkedList.printList(b);
 
 	}
 }
@@ -46,8 +48,8 @@ class LinkedList {
 		mid.next = null;
 
 		/* Recursively sort the sublists */
-		mergeSort(a);
-		mergeSort(b);
+		a = mergeSort(a);
+		b = mergeSort(b);
 
 		/* answer = merge the two sorted lists together */
 		head = MergeSortedList(a, b);
@@ -124,11 +126,12 @@ class LinkedList {
 		head = newNode;
 	}
 
-	void printList(ListNode head) {
+	static void printList(ListNode head) {
 		ListNode node = head;
 		while (node != null) {
 			System.out.print(node.data + " ");
 			node = node.next;
 		}
+		System.out.println();
 	}
 }

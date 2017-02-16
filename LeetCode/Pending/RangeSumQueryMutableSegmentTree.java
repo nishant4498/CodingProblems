@@ -1,4 +1,4 @@
-package LevelFour.Pending;
+package Pending;
 /**
  * https://leetcode.com/problems/range-sum-query-mutable/
  */

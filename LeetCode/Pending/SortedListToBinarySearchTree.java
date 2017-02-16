@@ -1,4 +1,4 @@
-package LevelFour.Pending;
+package Pending;
 
 public class SortedListToBinarySearchTree {
 

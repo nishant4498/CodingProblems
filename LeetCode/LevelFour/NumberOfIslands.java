@@ -6,10 +6,7 @@ package LevelFour;
  * 
  * Basically we take each position with 1 and change its neigbors with mark 'X'.
  * Thus each time we get one group.
- * TODO See how to use union find data structure in this problem. Also how to do this 
- * without modifying the actual array.
- * Basically without modifying we can take a boolean array of size m X n and instead of updating 1 -> X
- * we can update the boolean array to true whenever we visit ones.
+ * TODO See how to use union find data structure in this problem.
  */
 public class NumberOfIslands {
 	public int numIslands(char[][] grid) {

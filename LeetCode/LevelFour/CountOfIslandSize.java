@@ -6,12 +6,12 @@ import java.util.List;
 /**
  * CTCI 16.19
  * This is very similar to the NumberOfIslands.Water is denoted by 0, Land is denoted by non-zero
- * positive integer;
+ * positive integer.
  * The main difference is:
  * Here we need to count the size of each pond i.e how many 0's are there continuosly 
  * (horizontally, vertically and diagonally).
  * 
- * In case of NumberOfIslands, it just counts how many land pieces(continuos ones) are there. *
+ * In case of NumberOfIslands, it just counts how many land pieces(continuos ones) are there.
  */
 public class CountOfIslandSize {
 	public List<Integer> getIslandSize(int[][] matrix){
@@ -41,7 +41,10 @@ public class CountOfIslandSize {
 		if (row < 0 || row >= m || col < 0 || col >= n || matrix[row][col] != 0 || visited[row][col]) {
 			return 0;
 		}
-		
+		/**
+		 * It's important to initialize size here as 1. Usually we think of initializing as 0.
+		 * But since we are already at this point, it means that the size is minimum one. 
+		 */
 		int size = 1;
 		visited[row][col] = true;
 		

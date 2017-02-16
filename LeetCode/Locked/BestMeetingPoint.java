@@ -40,14 +40,16 @@ public class BestMeetingPoint {
 		}
 		
 		int minDistance = 0;
-		
+		/**
+		 * We don't need to sort the rows as we access the rows already in ascending order.
+		 */
 		int rowMedian = rows.get(rows.size()/2);
 		for(int i: rows){
 			minDistance += Math.abs(i - rowMedian);
 		}
 		
 		/*
-		 * We sort the cols as the order of the columns might not be in incresing order.
+		 * We sort the cols as the order of the columns might not be in increasing order.
 		 * The rows are always in ascending order since we iterate that way.
 		 */
 		Collections.sort(cols);

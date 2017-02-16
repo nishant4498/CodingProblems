@@ -2,6 +2,7 @@ package LevelThree;
 
 /*
  * https://leetcode.com/problems/maximum-product-subarray/
+ * TODO check the problem with the leetcode refactired solution
  */
 public class MaxProductSubarray {
 	public int maxProduct(int[] nums) {

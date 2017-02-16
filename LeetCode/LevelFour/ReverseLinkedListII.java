@@ -10,6 +10,7 @@ import LevelOne.ListNode;
  * 1) head to m-1 th node
  * 2) m to n
  * 3) n + 1 to end
+ * 4) We create two dummy nodes - one connects to the mth node. The seond one connecst to the n+1 th node. 
  * 
  * This way we reverse the list from m to n. Then m -1th node points to the nth node and m th node points
  * to the n + 1th node. 
@@ -53,9 +54,14 @@ public class ReverseLinkedListII {
 		// p1 is the head of the reversed list. Thus p1 should be the next
 		// pointed by m-1 the node(here denoted by prev)
 		if(prev == null){
+			/**
+			 *  We can't return head here since in case prev is null, head is still the first node
+			 *  and since it has been reversed, it wont be able to access other nodes.
+			 */
+			
 			return p1;
 		}else{
-			prev.next = p1;// This makes m-1 point to n + 1 th node.
+			prev.next = p1;// This makes m-1 point to n'th node.
 		}
 		
 		return head;

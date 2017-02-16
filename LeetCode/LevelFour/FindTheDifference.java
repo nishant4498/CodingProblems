@@ -8,21 +8,25 @@ package LevelFour;
 public class FindTheDifference {
 
 	public static char findTheDifference(String s, String t) {
-		int[] count = new int[26];
-        char result = 'a';
-        for(int i =0; i < s.length(); i++){
-            count[s.charAt(i) - 'a']++;
-        }
-        
-        for(int i =0; i < t.length(); i++){
-            count[t.charAt(i) - 'a']--;
-            if(count[t.charAt(i) - 'a'] < 0){
-                result =  t.charAt(i);
-            }
-        }
-        
-        return result;
-    }
+		int[] charCount = new int[26];
+
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			charCount[ch - 'a']++;
+		}
+		char result = 'a';
+
+		for (int i = 0; i < t.length(); i++) {
+			char ch = t.charAt(i);
+			charCount[ch - 'a']--;
+			if (charCount[ch - 'a'] < 0) {
+				result = ch;
+				break;
+			}
+		}
+
+		return result;
+	}
 	
 	public static void main(String[] args) {		
 		System.out.println(findTheDifference("abcd", "abcde"));//ans e.
