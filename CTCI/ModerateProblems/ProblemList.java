@@ -4,6 +4,7 @@ public class ProblemList {
 	/*
 	 * 1. NumberSwapper
 	 * 2. WordFrequencies
+	 * 4. TicTacToe
 	 * 5. FactorialTrailingZeros LeetCode
 	 * 6. SmallestDifference
 	 * 8. IntegerToEnglishWords
@@ -15,8 +16,7 @@ public class ProblemList {
 	 *25. LRUCache
 	 *26. BasicCalculatorII
 	 * 
-	 * 3. Intersection of line segmnents- Not done
-	 * 4. TicTacWin - Not done 
+	 * 3. Intersection of line segmnents- Not done	 *  
 	 * 7. NumberMax - Not done 
 	 * 9. OperationsUsingAdd - Not Done
 	 *10. LivingPeople - Not done

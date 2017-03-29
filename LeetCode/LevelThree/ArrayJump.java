@@ -28,15 +28,21 @@ public class ArrayJump {
 		if (n == 0)
 			return 0;
 		int[] jumps = new int[n];// stores the minimum number of jumps needed to reach any index
-		int[] result = new int[n];// Stores the result i.e the position from which we came to particular index
 		
+		/**
+		 * Stores the result i.e the position from which we came to particular index.
+		 * Not needed if we don't need to print the steps.
+		 */
+		int[] result = new int[n];
 
 		jumps[0] = 0;
 
 		for (int i = 1; i < n; i++) {
 			jumps[i] = Integer.MAX_VALUE;
 		}
-
+		/**
+		 * Pretty much similar to LongestIncreasingSubsequence
+		 */
 		for (int i = 1; i < n; i++) {
 			for (int j = 0; j < i; j++) {
 				if (j + nums[j] >= i) {

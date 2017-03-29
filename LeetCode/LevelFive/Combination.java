@@ -9,7 +9,7 @@ import java.util.List;
  * Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
  *  n = 4 and k = 2, a solution is:  [ [2,4], [3,4],[2,3],[1,2],[1,3],[1,4],]
  *  
- *  Basically this is same as PowerSet , some of the diffrences being
+ *  Basically this is same as PowerSet , some of the differences being
  *  a) We don't store every tempList but only lists of length k.
  *  b) We start with 1 as n varies from 1-n.
  */

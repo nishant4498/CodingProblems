@@ -21,6 +21,11 @@ public class PermutationDuplicatesSorted {
 	/**
 	 * If we need to generate a string as output instead of list, we can use StringBuilder 
 	 * in place of templist.
+	 * 
+	 * Basically the condition used[i] can be individually used even in case the items are distinct.
+	 * 
+	 * This can replace the condition
+	 * if(tempList.contains(nums[i])) in the Permutation line 26.
 	 */
 	public void helper(List<String> result, StringBuilder sb, boolean[] used, char[] input) {
 		if (sb.length() == input.length) {

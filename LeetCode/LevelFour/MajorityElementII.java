@@ -3,7 +3,7 @@ package LevelFour;
 /*
  * https://leetcode.com/problems/majority-element-ii/
  * 
- * In this problem we need to find elements which appear more tha n/3 times. As we can easily see,
+ * In this problem we need to find elements which appear more than n/3 times. As we can easily see,
  * there can only be two such majority elements.
  * Thus this is a simple extension to the majority element problem but we need to keep track of two pointers
  * for the two elements.  

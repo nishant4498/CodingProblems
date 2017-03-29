@@ -23,6 +23,11 @@ public class Permutation {
 			return;
 		}		
 		for(int i = 0; i< nums.length; i++){
+			/**
+			 * tempList.contains(nums[i]) can also be replaced with using an extra boolean[] used
+			 * and checking used[i].
+			 * Similar to PermutationWithDuplicates
+			 */
 			if(tempList.contains(nums[i])) continue;
 			tempList.add(nums[i]);
 			helper(result, tempList, nums);

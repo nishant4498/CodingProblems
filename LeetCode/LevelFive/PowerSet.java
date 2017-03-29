@@ -1,7 +1,6 @@
 package LevelFive;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -59,7 +58,7 @@ public class PowerSet {
 		List<List<Integer>> result = new ArrayList<>();
 		List<Integer> tempList = new ArrayList<>();
 		
-		Arrays.sort(nums);		
+		//Arrays.sort(nums);		// Sorting not needed here.
 		helper(result, tempList, nums, 0);
 		return result;
 	}

@@ -1,6 +1,8 @@
-package Locked;
+package LevelSix;
 /*
  * http://www.programcreek.com/2014/07/leetcode-best-meeting-point-java/
+ * Leetcode locked.
+ * 
  * Given a grid where 1's represent houses, and the distance to be considered is manhatten distance,
  * we need to find the minimum distance needed to tavel for all to meet.
  */

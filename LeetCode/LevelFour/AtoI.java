@@ -38,7 +38,7 @@ public class AtoI {
 				
 				result = result * 10 + num;
 			}else{
-				return 0;
+				return sign * result;
 			}
 		}
 		

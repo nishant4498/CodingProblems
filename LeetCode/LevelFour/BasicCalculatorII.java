@@ -60,7 +60,7 @@ public class BasicCalculatorII {
 				md = 1;
 			}else if(c == '/'){
 				md = 0;
-			}else if(sign == '+'){
+			}else if(c == '+'){
 				/**
 				 * Important point to note here is that the result computed here is the result of
 				 * the expression coming before that sign.Since there is no md flag, we dont need to 
@@ -68,7 +68,7 @@ public class BasicCalculatorII {
 				 */
 				result = result + sign * prev;
 				sign = 1;
-			}else if(sign == '-'){
+			}else if(c == '-'){
 				result = result + sign * prev;
 				sign = -1;
 			}

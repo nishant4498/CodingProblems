@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * https://leetcode.com/problems/combination-sum-ii/
  * 
- * Given a set of candidate numbers C(without duplicates), a target sum T, find all unique 
+ * Given a set of candidate numbers C(which might have duplicates), a target sum T, find all unique 
  * combinations in C that sum to T.Each number in C may only be used once in the combination. 
  * 
  *  C = [10, 1, 2, 7, 6, 1, 5] T = 8
@@ -15,7 +15,7 @@ import java.util.List;
  *  
  *  Difference from CombinationSum
  *  
- *  1) Start is updated to  i + 1 since we dont need to consider the dsme element again.
+ *  1) Start is updated to  i + 1 since we dont need to consider the same element again.
  *  2) We use the condition if(used[i] || i > start && input[i] == input[i-1] && !used[i-1]) continue
  *     to avoid duplicate entries into the set.
  *

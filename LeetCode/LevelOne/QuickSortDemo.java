@@ -19,11 +19,10 @@ public class QuickSortDemo {
 	}
 	
 	public static void quickSort(int[] arr, int low, int high){
-		if(arr == null || arr.length ==0 ){
+		if(arr.length ==0 || low >= high){
 			return;
-		}
+		}		
 		
-		if(low >= high) return;
 		int mid = low + (high - low)/2;
 		
 		int pivot = arr[mid];

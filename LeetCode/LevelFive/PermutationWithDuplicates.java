@@ -20,6 +20,28 @@ public class PermutationWithDuplicates {
 	 * This basically says that we ignore a number if: a) It has been used
 	 * already. b) It is the same number as the previous number and the previous
 	 * number has not been used yet.
+	 * 
+	 * The idea here is to only consider the item once in any permutation 
+	 * 
+	 * Let's take example of 1 1 2
+	 * 
+	 * For the first iteration
+	 * 
+	 * i = 0 item = 1 , used[] initially = [F, F, F], used[] later = [T,F, F], tempList= [1,]
+	 *       i = 0 item = 1 , used[] = [T,F,F] , since used[i] we move  to i = 1
+	 *       i = 1 item = 1 , used[] = [T,F,F] , used[i] = False, nums[i] == nums[i-1] but used[i-1] = True, This means we are
+	 *                        visiting this for the fisrt time and thus add
+	 *                        Thus used[] = [T,T,F] tempList = [1,1]
+	 *              i = 0, item = 1 , used[] = [T,T,F] used[i] = true continue
+	 *              i = 1, item = 1                    used[i] = true continue 
+	 *              i = 2, item = 2 used[i] = false add, used[T,T,T] tempList = [1,1,2]
+	 *        
+	 * i = 1, item = 1, used[] [F,F,F], here nums[i] == nums[i-1] but used[i-1] = false
+	 * 					so we ignore this path totally.This basically means that, since we have not used[i-1]
+	 *                  in this iteration, it much have been used in previous iteration and thus we should ignore this
+	 *                  path totally as it will generate the same result. 
+	 * 
+	 * i = 2 item = 2, used[] = [F,F,F]
 	 */
 	public List<List<Integer>> permuteUnique(int[] nums) {
 		List<List<Integer>> result = new ArrayList<>();

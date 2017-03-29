@@ -1,5 +1,6 @@
 package LevelThree;
 /*
+ * https://leetcode.com/problems/longest-palindromic-subsequence/
  * https://www.youtube.com/watch?v=_nCsPn7_OgI
  */
 public class LongestPalindromicSubsequence {
@@ -23,7 +24,15 @@ public class LongestPalindromicSubsequence {
 		for(int i=0; i < n-1; i++){
 			if(s.charAt(i) == s.charAt(i+1)){
 				LPS[i][i+1] = 2;
-			}
+			}else{
+                /**
+                 * This is the new addition to our general code for leetcode all different chars 
+                 * like abcde. Our code would have returned 0, whereas expected is 1.
+                 * Other way is to keep track of max length as in LongestPalindromicSubstring.
+                 */
+                LPS[i][i+1] = 1;
+            }
+			
 		}
 		// For length 3 or more.
 		for(int k =3; k <= n; k++){

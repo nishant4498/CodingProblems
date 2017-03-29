@@ -1,6 +1,8 @@
 package LevelOne;
 
 /*
+ * https://leetcode.com/problems/number-of-1-bits/
+ * 
  * The number of 1 bits in an integer is called Hamming Weight of the number.
  */
 public class HammingWeight {

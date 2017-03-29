@@ -19,7 +19,7 @@ public class InvertBinaryTree {
     }
     /*
      * The iterative idea is very simple.
-     * We use a queue to keep the nodes whose childeren have not beem swapped yet.
+     * We use a queue to keep the nodes whose children have not beem swapped yet.
      * The only thing to keep in mind is - First swap the children, then put them in the queue.
      * Thus the right child will come first in the queue as it ill become left child after swapping.
      */

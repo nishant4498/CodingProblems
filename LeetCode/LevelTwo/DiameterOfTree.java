@@ -1,5 +1,6 @@
 package LevelTwo;
 /**
+ * https://leetcode.com/problems/diameter-of-binary-tree
  * http://www.geeksforgeeks.org/diameter-of-a-binary-tree/
  * 
  * The time complexity of this approach is O(n^2).
@@ -29,5 +30,28 @@ public class DiameterOfTree {
 		if(root == null) return -1;
 		
 		return 1 + Math.max(height(root.left), height(root.right));
+	}
+	
+	/**
+	 * Solution 2  - Using Max Depth approach
+	 * https://discuss.leetcode.com/topic/83456/java-solution-maxdepth
+	 */
+	
+	int max = 0;
+	
+	public int diameterOfBinaryTree(TreeNode root) {
+        maxDepth(root);
+        return max;
+    }
+    
+    public int maxDepth(TreeNode root){
+		if(root == null) return 0;
+		
+		int left = maxDepth(root.left);
+		int right = maxDepth(root.right);
+		
+		max = Math.max(max, left + right);
+		
+		return Math.max(left, right) + 1;
 	}
 }
